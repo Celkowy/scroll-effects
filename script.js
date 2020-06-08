@@ -1,9 +1,21 @@
+    const $topTheTop = $('.to-the-top');
+
+    $topTheTop.on('click', function(){
+      $("html, body").animate({
+        scrollTop: 0
+      }, "slow");
+    })
+    
     $(window).on('scroll', function () {
       $('.futer').text('aktualna pozycja: ' + $(document).scrollTop() + 'px');
       
       if ($(window).scrollTop() > 99) {
-        $('div.futer').addClass('show')
-      } else $('.futer').removeClass('show')
+        $topTheTop.addClass('show')
+        $('.futer').addClass('show')
+      } else {
+        $('.futer').removeClass('show')
+        $topTheTop.removeClass('show')
+      }
 
       if($(window).scrollTop() > 10){
         $('.section-selector').addClass('show');
@@ -21,8 +33,6 @@
         scrollTop: $(keep).offset().top
       }, 500)
     })
-
-    const scrollPosition = $(window).scrollTop();
 
     $(document).on('scroll', function(){
 
@@ -63,18 +73,16 @@
     })
 
     function whichSectionIsIt(){
+      const scrollPosition = $(window).scrollTop();
       const sectionHeight = $('.s1').height();
-      const whereTheSectionBegins2 = $('.s2').offset().top;
-      const whereTheSectionBegins3 = $('.s3').offset().top;
-      const whereTheSectionBegins4 = $('.s4').offset().top;
       
       if(scrollPosition < sectionHeight){
         $('p').text('1');
-      } else if(scrollPosition < sectionHeight + whereTheSectionBegins2){
+      } else if(scrollPosition < sectionHeight * 2 ){
         $('p').text('2');
-      } else if(scrollPosition < sectionHeight + whereTheSectionBegins3){
+      } else if(scrollPosition < sectionHeight * 3){
         $('p').text('3');
-      } else if(scrollPosition < sectionHeight + whereTheSectionBegins4){
+      } else if(scrollPosition < sectionHeight * 4){
         $('p').text('4');
       }
     }
