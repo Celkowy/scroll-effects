@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: white;
+  font-family: Arial;
+  font-size: 24px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+nav {
+  position: absolute;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  transition: .4s;
+}
+
+nav.smaller {
+  height: 3.5vh;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 25%;
+  border-right: 3px solid royalblue;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  font-size: 32px;
+}
+
+a:last-child {
+  border: none;
+}
+
+a:hover {
+  background-color: royalblue;
+}
+
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+  height: 100vh;
+}
+
+.s1 {
+  background-color: tomato;
+}
+
+.s2 {
+  background-color: teal;
+}
+
+.s3 {
+  background-color: violet;
+}
+
+.s4 {
+  background-color: yellowgreen;
+}
+
+.section-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  transition: .8s;
+}
+
+.section-selector.show {
+  left: 0;
+}
+
+.section-selector p {
+  font-size: 34px;
+  color: white;
+}
+
+.expand {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: -500px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: teal;
+  transition: 1s;
+}
+
+.expand1 {
+  background-color: teal;
+}
+
+.expand1.show {
+  right: 0;
+}
+
+.expand2 {
+  background-color: tomato;
+  left: -500px;
+}
+
+.expand2.show {
+  left: 0;
+}
+
+.expand3 {
+  background-color: yellowgreen;
+}
+
+.expand3.show {
+  right: 0;
+}
+
+.expand4 {
+  background-color: violet;
+  left: -500px;
+}
+
+.expand4.show {
+  left: 0;
+}
+
+.futer {
+  position: fixed;
+  bottom: -10vh;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  height: 10vh;
+  background-color: black;
+  transition: .8s;
+}
+
+.futer.show {
+  bottom: 0;
+}
