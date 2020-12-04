@@ -21,7 +21,7 @@ nav {
   height: 5vh;
   width: 100vw;
   display: flex;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 nav.smaller {
@@ -85,7 +85,7 @@ section {
   width: 50px;
   height: 50px;
   background-color: black;
-  transition: .8s;
+  transition: 0.8s;
 }
 
 .section-selector.show {
@@ -157,7 +157,7 @@ section {
   font-size: 32px;
   height: 10vh;
   background-color: black;
-  transition: .8s;
+  transition: 0.8s;
 }
 
 .futer.show {
@@ -170,20 +170,29 @@ section {
   right: 2%;
   font-size: 50px;
   cursor: pointer;
-  transition: .8s;
+  transition: 0.8s;
 }
 
 .to-the-top.show {
   bottom: 2%;
 }
 
-@media(max-width: 1024px) {
-
+@media (max-width: 1024px) {
   .higher {
     display: block;
   }
 
   .expand {
     width: 100px;
+  }
+
+  .futer {
+    font-size: 21px;
+  }
+
+  .to-the-top.show {
+    position: fixed;
+    bottom: 10vh;
+    right: 2%;
   }
 }
