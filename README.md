@@ -1,3 +1,3 @@
 # scroll-effects
 
-Playing around with jQuery scroll event
+Playing around with scroll events using jQuery
