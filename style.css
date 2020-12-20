@@ -196,4 +196,17 @@ section {
     bottom: 10vh;
     right: 2%;
   }
+
+  .section-selector {
+    display: none;
+  }
+
+  .higher {
+    display: none;
+  }
+
+  #font {
+    font-size: 21px;
+    padding: 5px;
+  }
 }
