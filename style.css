@@ -197,6 +197,10 @@ section {
     right: 2%;
   }
 
+  .section-selector {
+    display: none;
+  }
+
   .higher {
     display: none;
   }

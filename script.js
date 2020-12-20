@@ -10,7 +10,7 @@ $topTheTop.on('click', () => {
 })
 
 $(window).on('scroll', () => {
-  $('.futer').text('aktualna pozycja: ' + $(document).scrollTop() + 'px')
+  $('.futer').text('aktualna pozycja: ' + Math.round($(document).scrollTop()) + 'px')
 
   if ($(window).scrollTop() > 99) {
     $topTheTop.addClass('show')
